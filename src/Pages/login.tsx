@@ -1,12 +1,14 @@
 import React from 'react';
-import '../style/login.css';
+import LoginForm from '../Components/loginForm';
+import '../styles/login.css'
 
 class Login extends React.Component{
     render(){
     return(
         <main className="main-container">
             <div className="main-content">
-            <h1>Welcome to CodeLeap network!</h1>
+                <h1>Telzir</h1>
+                <LoginForm/>
             </div>  
         </main>
     )

@@ -1,0 +1,29 @@
+html{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(214, 214, 214);
+}
+
+body{
+    background-color: rgb(214, 214, 214);
+}
+
+.main-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content{
+    background-color: rgb(255, 255, 255);
+    width: 40rem;
+    height: 20rem;
+}
+
+.main-content h1 {
+    margin: 1.5rem;
+    font-size: 1.5rem;
+}
