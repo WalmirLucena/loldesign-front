@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    background-color: rgb(214, 214, 214);
+
+}
+
+.home-header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    padding: 1.25rem;
+}
+
+.image {
+    align-items: center;
+    height: 15px;
+    width: 25x;
+    margin: 0 0.5rem;
+}

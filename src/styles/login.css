@@ -2,6 +2,7 @@ html{
     margin: 0;
     padding: 0;
     background-color: rgb(214, 214, 214);
+    font-family: 'Montserrat', sans-serif;
 }
 
 body{
@@ -22,11 +23,13 @@ body{
     background-color: rgb(255, 255, 255);
     width: 40rem;
     padding-bottom: 2rem;
+    box-shadow: 0 0 0.5em rgb(26, 25, 25);
+    border-radius: 5px;
 }
 
 .main-content h1 {
-    margin: 1.5rem;
-    font-size: 1.5rem;
+    margin: 1rem 1.5rem 0;
+    font-size: 2.5rem;
 }
 
 
@@ -42,6 +45,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-top: 1rem;
 }
 
 .input-text label {
@@ -65,7 +69,7 @@ body{
     margin: 0.75rem 1.5rem 0rem;
     border: 1px solid rgb(82, 82, 82);
     border-radius: 3px;
-    padding: 0.25rem;
+    padding: 0.5rem;
     box-sizing: border-box;
 }
 
@@ -74,7 +78,7 @@ body{
     margin: 0.75rem 1.5rem 0rem;
     border: 1px solid rgb(82, 82, 82);
     border-radius: 3px;
-    padding: 0.25rem;
+    padding: 0.5rem;
     box-sizing: border-box;
 }
 
@@ -82,11 +86,20 @@ body{
     color: rgb(177, 177, 177);
 }
 
+.input-password input::placeholder {
+    color: rgb(177, 177, 177);
+}
+
+.failed-paragraph {
+    color: red;
+}
+
 .submit-button {
     align-items: center;
     background-color: black;
     color: white;
     border: none;
+    border-radius: 5px;
     margin-top: 1rem;
     padding: 0.5rem;
     width: 100px;
@@ -97,6 +110,7 @@ body{
     background-color: rgb(153, 153, 153);
     color: white;
     border: none;
+    border-radius: 5px;
     margin-top: 1rem;
     padding: 0.5rem;
     width: 100px;
