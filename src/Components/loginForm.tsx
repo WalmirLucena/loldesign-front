@@ -19,6 +19,10 @@ class LoginForm extends React.Component <{}, MyState> {
         failedTryLogin: false
     }
 
+    componentDidMount () {
+        localStorage.clear();
+    }
+
     changeDisabled = (): void => {
         const {password, email}= this.state;
 
