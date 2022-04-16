@@ -18,12 +18,86 @@ body{
 }
 
 .main-content{
+    align-items: center;
     background-color: rgb(255, 255, 255);
     width: 40rem;
-    height: 20rem;
+    padding-bottom: 2rem;
 }
 
 .main-content h1 {
     margin: 1.5rem;
     font-size: 1.5rem;
+}
+
+
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-text, .input-password{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-text label {
+    width: 100%;
+}
+
+.input-password label {
+    width: 100%;
+}
+
+.input-text label span{
+    margin-left: 1.5rem;
+}
+
+.input-password label span{
+    margin-left: 1.5rem;
+}
+
+.input-text input {
+    width: 90%;
+    margin: 0.75rem 1.5rem 0rem;
+    border: 1px solid rgb(82, 82, 82);
+    border-radius: 3px;
+    padding: 0.25rem;
+    box-sizing: border-box;
+}
+
+.input-password input {
+    width: 90%;
+    margin: 0.75rem 1.5rem 0rem;
+    border: 1px solid rgb(82, 82, 82);
+    border-radius: 3px;
+    padding: 0.25rem;
+    box-sizing: border-box;
+}
+
+.input-text input::placeholder {
+    color: rgb(177, 177, 177);
+}
+
+.submit-button {
+    align-items: center;
+    background-color: black;
+    color: white;
+    border: none;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    width: 100px;
+}
+
+.submit-button-grey{
+    align-items: center;
+    background-color: rgb(153, 153, 153);
+    color: white;
+    border: none;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    width: 100px;
 }
