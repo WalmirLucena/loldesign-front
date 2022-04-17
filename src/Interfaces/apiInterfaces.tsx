@@ -12,8 +12,15 @@ interface ICall {
 }
 
 interface Call extends ICall{
+    id:number,
+    userId:number,
     price: number,
     priceWithPlan: number
 }
 
-export type { IBody, ICall, Call};
+interface IDelete {
+    id:number,
+    userId: number
+}
+
+export type { IBody, ICall, Call,IDelete};

@@ -115,3 +115,8 @@ body{
     padding: 0.5rem;
     width: 100px;
 }
+
+.create-login{
+    border: none;
+    margin: 0.5rem 1rem;
+}

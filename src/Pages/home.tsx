@@ -12,6 +12,10 @@ type MyState = {
     price: number;
     priceWithPlan: number;
     showPrice: boolean;
+    origin:number;
+    destiny:number;
+    time:number;
+    showCalls: boolean;
 }
 
 class Home extends React.Component <{}, MyState>{
@@ -21,25 +25,44 @@ class Home extends React.Component <{}, MyState>{
         isLogged: false,
         price: 0,
         priceWithPlan: 0,
-        showPrice: false
+        showPrice: false,
+        origin: 0,
+        destiny: 0,
+        time: 0,
+        showCalls: false
     }
 
     componentDidMount() {
         const data =  localStorage.getItem('user');
         if(data) {
             const {username, id} = JSON.parse(data);
+            console.log(typeof id)
             this.setState({username, id, isLogged:true})
         }
     }
 
     getPrice = (data: Call) => {
-        const {price, priceWithPlan} = data;
-        console.log(data);
-        this.setState({price, priceWithPlan,showPrice: true})
+        const {price, priceWithPlan,origin, destiny,time} = data;
+        console.log(data, 'home');
+        this.setState({
+            price, priceWithPlan,showPrice: true, origin, destiny, time})
+    }
+
+    handleClick = () => {
+        const {showCalls} = this.state
+        this.setState({showCalls: !showCalls})
     }
 
     render(){
-        const{username,isLogged,price,priceWithPlan, showPrice} = this.state;
+        const{username,
+            isLogged,
+            price,priceWithPlan,
+            showPrice,
+            origin,
+            destiny,
+            time,
+            id,
+            showCalls} = this.state;
     if(isLogged)
     return(
         <main>
@@ -47,24 +70,31 @@ class Home extends React.Component <{}, MyState>{
                 <h1>Telzir</h1>
                 <p><img className='image' src={profileImage}  alt="profile icon"/>{username}</p>
             </header>
+            <button type="button" className="show-calls" onClick={this.handleClick}>Mostrar histórico de ligações</button>
+            {showCalls?<RenderCalls id={id} />  :null}
+            <hr className="line"/>
             <CallsForm getPrice={this.getPrice}/>
-            {/* <RenderCalls id={id} /> */}
+            <hr className="line"/>
             {showPrice? 
             <div className="price-container">
                 <table>
                     <tr>
+                        <th>DDD Origem</th>
+                        <th>DDD Destino</th>
+                        <th>Tempo em min</th>
                         <th>Preço com o Plano</th>
                         <th>Preço Normal</th>
                     </tr>
                     <tr>
+                        <td>{origin}</td>
+                        <td>{destiny}</td>
+                        <td>{time}</td>
                         <td>R${price.toFixed(2)}</td>
                         <td>R${priceWithPlan.toFixed(2)}</td>
                     </tr>
                 </table>
             </div>: null}
-            
-
-
+                     
         </main>
     )
     }
