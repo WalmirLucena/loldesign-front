@@ -4,8 +4,8 @@ type MyState = {
     origin: number;
     destiny:number;
     time: number | string;
-    username:string
-
+    username:string;
+    plan: number;
 }
 
 class CallsForm extends React.Component <{}, MyState> {
@@ -13,7 +13,8 @@ class CallsForm extends React.Component <{}, MyState> {
         origin: 0,
         destiny: 0,
         time: '',
-        username: ''
+        username: '',
+        plan: 0,
     }
 
     componentDidMount() {
@@ -27,15 +28,16 @@ class CallsForm extends React.Component <{}, MyState> {
         this.setState({ ...this.state,
             [event.currentTarget.id]: event.currentTarget.value });
       }
+
     render (){
-        const {origin, destiny,time} = this.state;
-        console.log(time, 'callsform');
+        const {origin, destiny,time, plan} = this.state;
+        
         return (   
             <form className="calls-form">
                 <div className="select-origin">
                     <label htmlFor="Origin">
                         <select id="origin" value={origin} onChange={this.handleChange}>
-                            <option value="">Select an origin</option>
+                            <option value="">Escolha o DDD de origem</option>
                             <option value="11" >011</option>
                             <option value="16" >016</option>
                             <option value="17" >017</option>
@@ -46,7 +48,7 @@ class CallsForm extends React.Component <{}, MyState> {
                 <div className="select-destiny">
                     <label htmlFor="destiny">
                         <select id="destiny" value={destiny} onChange={this.handleChange}>
-                            <option value="">Select an destiny</option>
+                            <option value="">Escolha o DDD do destino</option>
                             <option value="11" >011</option>
                             <option value="16" >016</option>
                             <option value="17" >017</option>
@@ -61,14 +63,23 @@ class CallsForm extends React.Component <{}, MyState> {
                         id="time" 
                         className="input-time" 
                         value={time} 
-                        placeholder="Enter Call time in minutes" 
+                        placeholder="Tempo de ligação em minutos" 
                         onChange={this.handleChange} />
                     </label>
-
                 </div>
-              
-                
-               
+                <div className="select-plan">
+                    <label htmlFor="plan">
+                        <select id="plan" value={plan} onChange={this.handleChange}>
+                            <option value="">Escolha o seu Plano</option>
+                            <option value="30" >FaleMais 30</option>
+                            <option value="60" >FaleMais 60</option>
+                            <option value="120" >FaleMais 120</option>
+                        </select>
+                    </label>
+                </div>
+                <input type="submit"
+                value="Calcular"
+                className="call-input-button"/>
             </form>
 
         )

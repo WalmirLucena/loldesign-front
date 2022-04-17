@@ -71,7 +71,7 @@ class LoginForm extends React.Component <{}, MyState> {
         <form className="login-form" onSubmit={this.handleSubmit}>
                 <div className="input-text">
                     <label htmlFor="email">
-                        <span>Please enter your email</span>
+                        <span>Digite seu email</span>
                         <input type="text" 
                         name="email" 
                         id="email" 
@@ -83,25 +83,25 @@ class LoginForm extends React.Component <{}, MyState> {
                 </div>
                 <div className="input-password">
                     <label htmlFor="name">
-                        <span>Please enter your password</span>
+                        <span>Digite sua senha</span>
                         <input type="password" 
                         name="password" 
                         id="password" 
                         className="input-password" 
                         value={password} 
-                        placeholder="Password"  
+                        placeholder="********"  
                         onChange={this.handleChange} />
                     </label>
                 </div>
                 {
                 (failedTryLogin) ? 
-                ( <p className="failed-paragraph">The email address or password is not correct.
-                    Please try again.
+                ( <p className="failed-paragraph">O email ou senha não está correto.
+                    Por favor tente novamente.
                 </p>) : null
                 }
                 
                 <input type="submit"
-                value="ENTER"
+                value="ENTRAR"
                 disabled={disabled}
                 className={disabled? "submit-button-grey":"submit-button" }/>
             </form>

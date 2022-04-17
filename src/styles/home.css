@@ -32,7 +32,7 @@ html {
     margin: 1rem;
 }
 
-#origin, #destiny, #time{
+#origin, #destiny, #time, #plan{
     padding: 0.5rem;
     border: none;
     border-radius: 5px;
@@ -43,6 +43,23 @@ html {
     text-align: center;
     font-size: 16px;
     margin: 0 1rem;
+}
+
+#time {
+    width: 250px;
+}
+
+.call-input-button {
+    align-items: center;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 100px;
+    font-size: 16px;
+    margin: 0 1rem;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
 }
 
 
