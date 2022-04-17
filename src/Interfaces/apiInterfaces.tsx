@@ -3,4 +3,17 @@ interface IBody {
     password: string
 }
 
-export type { IBody };
+interface ICall {
+    origin: number,
+    destiny: number,
+    time: number,
+    plan: number,
+    name: string,
+}
+
+interface Call extends ICall{
+    price: number,
+    priceWithPlan: number
+}
+
+export type { IBody, ICall, Call};

@@ -41,12 +41,18 @@ html {
     -webkit-appearance:button;
     outline: none;
     text-align: center;
-    font-size: 16px;
-    margin: 0 1rem;
+    font-size: 14px;
+    margin: 0.5rem 0;
+    width: 15rem;
 }
 
-#time {
-    width: 250px;
+.select-origin, .select-destiny, .input-time, .select-plan {
+    width: 20rem;
+}
+
+.select-origin, .select-destiny, .input-time, .select-plan label{
+    margin: 0 0.5rem;
+    font-size: 18px;
 }
 
 .call-input-button {
@@ -60,6 +66,27 @@ html {
     font-size: 16px;
     margin: 0 1rem;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin: 2rem 5rem;
+}
+
+table {
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.price-container table, th, td {
+    margin: 0 1rem;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 0.5rem;
+    background-color: rgb(232, 232, 232);
 }
 
 
