@@ -17,6 +17,18 @@ Após inserir os dados é mostrado o valor da ligação com o plano e sem o plan
 
 ## Executando a aplicação
 
+Clone o repositório:
+
+```bash
+git clone https://github.com/WalmirLucena/loldesign-front.git
+```
+Navegue até o diretório do projeto:
+
+```bash
+cd loldesign-front
+```
+Iniciando o Docker container:
+
 ```bash
 docker-compose up -d
 ```
