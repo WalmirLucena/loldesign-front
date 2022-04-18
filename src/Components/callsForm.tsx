@@ -62,7 +62,7 @@ class CallsForm extends React.Component <Props, MyState> {
             <form className="calls-form" onSubmit={this.handleSubmit}>
                 <div className="select-origin">
                     <label htmlFor="Origin">
-                        Origem da ligação
+                        <span>Origem da ligação</span>
                         <select id="origin" value={origin} onChange={this.handleChange}>
                             <option value="">Escolha o DDD de origem</option>
                             <option value="11" >011</option>

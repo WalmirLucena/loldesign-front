@@ -66,6 +66,7 @@ html {
     font-size: 16px;
     margin: 0 1rem;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+
 }
 
 .price-container {
@@ -131,4 +132,105 @@ table {
 .delete-icon{
     
     height: 30px;
+}
+
+@media screen and (max-width: 1125px){
+    .calls-form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #origin, #destiny, #time, #plan{
+        width: 13rem;
+    }
+    #time {
+        width: 12rem;
+
+    }
+
+    .select-origin, .select-destiny, .input-time, .select-plan {
+        width: 16rem;
+    }
+
+    .select-origin, .select-destiny, .input-time, .select-plan label{
+        margin: 0.5rem;
+        font-size: 18px;
+    }
+
+    .calls-table, th, td {
+        padding: 0.5rem;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .calls-form{
+        display: flex;
+        flex-flow: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #origin, #destiny, #plan{
+        width: 12rem;
+    }
+    #time{
+        width: 11rem;
+    }
+
+    .select-origin, .select-destiny, .input-time, .select-plan {
+        width: 16rem
+    }
+
+    .select-origin, .select-destiny, .input-time, .select-plan label{
+        margin: 0;
+        font-size: 18px;
+    }
+
+    .calls-table, th, td {
+        padding: 0.5rem;
+        font-size: 14px;
+    }
+
+    .call-input-button {
+        margin: 0.5rem 0 0 -2.25rem
+    }
+}
+
+@media screen and (max-width: 445px){
+    .calls-table, th, td {
+        padding: 0.5rem;
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .call-input-button {
+        
+        margin: 0.5rem 0 0 -2.25rem
+    }
+
+    .delete-icon{
+        height: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 375px){
+    .calls-table, th, td {
+        padding: 0.5rem;
+        font-size: 10px;
+        margin: 0;
+
+    }
+
+    .call-input-button {
+        
+        margin: 0.5rem 0 0 -2.25rem
+    }
+
+    .delete-icon{
+        height: 20px;
+    }
+    
 }
