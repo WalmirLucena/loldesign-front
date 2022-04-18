@@ -1,46 +1,30 @@
-# Getting Started with Create React App
+# LOLDESIGN ShowMeTheCode Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto trata-se de uma aplicação Web para uma empresa telefônica Telzir, onde o cliente pode calcular o valor da ligação.
 
-## Available Scripts
+Após o usuário fazer login com seu nome, é redirecionado para uma tela onde pode escolher os códigos das cidades de origem e destino, o tempo de ligação em minutos e escolher o plano FaleMais.
 
-In the project directory, you can run:
+Após inserir os dados é mostrado o valor da ligação com o plano e sem o plano
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tecnologias Utilizadas
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+ <img  height="40" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="REACT" />
 
-### `npm test`
+  <img  height="40" width="60" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/640px-Typescript_logo_2020.svg.png" alt="Typescript" />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img  height="40" width="80" src="https://miro.medium.com/max/1200/1*HuEr6-Y7nXOTGJoyZf0Yew.png" alt="CYPRESS"/>
 
-### `npm run build`
+## Executando a aplicação
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+docker-compose up -d
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Executando os testes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> :warning: Será aberto no seu navegador o Cypress, após aberto selecione o arquivo `Login.spec.ts`, ou `Sign-up.spec.ts` ou `Home.spec.ts`, para testar as páginas individualmente.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm test
+```
