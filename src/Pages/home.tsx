@@ -36,14 +36,12 @@ class Home extends React.Component <{}, MyState>{
         const data =  localStorage.getItem('user');
         if(data) {
             const {username, id} = JSON.parse(data);
-            console.log(typeof id)
             this.setState({username, id, isLogged:true})
         }
     }
 
     getPrice = (data: Call) => {
         const {price, priceWithPlan,origin, destiny,time} = data;
-        console.log(data, 'home');
         this.setState({
             price, priceWithPlan,showPrice: true, origin, destiny, time})
     }

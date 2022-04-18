@@ -1,5 +1,6 @@
 import React from 'react';
 import LoginForm from '../Components/loginForm';
+import { Link} from 'react-router-dom';
 import '../styles/login.css'
 
 class Login extends React.Component{
@@ -10,7 +11,13 @@ class Login extends React.Component{
                 <h1>Telzir</h1>
                 <LoginForm/>
                 <div>
-                    <button type="button" className="create-login">Não possui conta? Faça seu cadastro</button>
+                    <Link to='/sign-up'>
+                    <button 
+                    type="button" 
+                    className="create-login"
+                    >Não possui conta? Faça seu cadastro
+                    </button>
+                    </Link>
                 </div>
             </div>  
         </main>

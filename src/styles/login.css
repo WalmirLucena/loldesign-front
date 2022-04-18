@@ -41,7 +41,7 @@ body{
     align-items: center;
 }
 
-.input-text, .input-password{
+.input-text, .input-password, .input-email{
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -49,6 +49,10 @@ body{
 }
 
 .input-text label {
+    width: 100%;
+}
+
+.input-email label {
     width: 100%;
 }
 
@@ -64,7 +68,20 @@ body{
     margin-left: 1.5rem;
 }
 
+.input-email label span{
+    margin-left: 1.5rem;
+}
+
 .input-text input {
+    width: 90%;
+    margin: 0.75rem 1.5rem 0rem;
+    border: 1px solid rgb(82, 82, 82);
+    border-radius: 3px;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.input-email input {
     width: 90%;
     margin: 0.75rem 1.5rem 0rem;
     border: 1px solid rgb(82, 82, 82);
@@ -91,6 +108,7 @@ body{
 }
 
 .failed-paragraph {
+    margin-top: 0.5rem;
     color: red;
 }
 
@@ -103,6 +121,7 @@ body{
     margin-top: 1rem;
     padding: 0.5rem;
     width: 100px;
+    font-size: 16px;
 }
 
 .submit-button-grey{
@@ -114,9 +133,31 @@ body{
     margin-top: 1rem;
     padding: 0.5rem;
     width: 100px;
+    font-size: 16px;
+
 }
 
 .create-login{
     border: none;
     margin: 0.5rem 1rem;
+}
+
+.sign-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-container h1 {
+    padding: 0.5rem 1rem;
+}
+
+.sign-content {
+    width: 40rem;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 2rem;
+    box-shadow: 0 0 0.5em rgb(26, 25, 25);
+    border-radius: 5px;
 }

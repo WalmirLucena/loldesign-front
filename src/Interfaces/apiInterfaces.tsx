@@ -23,4 +23,8 @@ interface IDelete {
     userId: number
 }
 
-export type { IBody, ICall, Call,IDelete};
+interface IUser extends IBody {
+    username:string
+}
+
+export type { IBody, ICall, Call,IDelete, IUser};
