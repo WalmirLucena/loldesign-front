@@ -2,7 +2,7 @@ import axios from "axios";
 import { IBody, ICall, IUser } from "../Interfaces/apiInterfaces";
 
 const api = axios.create({
-    baseURL: `http://ec2-44-193-197-196.compute-1.amazonaws.com:${process.env.REACT_APP_API_PORT || '4001'}`,
+    baseURL: `http://localhost:${process.env.REACT_APP_API_PORT || '4001'}`,
   });
 
 export const requestNewCall = async (endpoint:string, body: ICall ) => {
